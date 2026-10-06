@@ -160,7 +160,7 @@ windower.register_event('addon command', function(command, ...)
     command = command and command:lower()
     local args = {...}
 
-    if command == 'auto' then
+    if not command or command == 'auto' then
         if args[1] == 'on' then
             settings.Auto = true
         elseif args[1] == 'off' then
@@ -199,6 +199,7 @@ windower.register_event('addon command', function(command, ...)
 
     else
         print(_addon.name .. ' v' .. _addon.version .. ':')
+        print('  (no command) - Toggles automatic door opening')
         print('  auto [on|off] - Sets automatic door opening to on/off or toggles it')
         print('  limit [1-20] - Shows or sets the number of attempts allowed per door')
         print('  reset - Clears door attempt counts for the current zone')
