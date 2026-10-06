@@ -1,6 +1,7 @@
 # OpenSesame
 
-OpenSesame opens nearby doors automatically with `//os auto on`. With auto mode
+OpenSesame opens nearby doors automatically with `//os` or `//os auto`. Either
+command toggles auto mode when used without another argument. With auto mode
 off, it still opens a door you have targeted. The addon waits a little over
 seven seconds between requests to the same door.
 
@@ -18,6 +19,7 @@ counts. The cap remains in your saved settings.
 
 | Command | Effect |
 | --- | --- |
+| `//os` | Toggle nearby-door auto mode. |
 | `//os auto [on\|off]` | Enable, disable, or toggle nearby-door mode. |
 | `//os limit` | Show the current per-door attempt limit. |
 | `//os limit 4` | Set the limit to four (any whole number from 1 to 20). |
